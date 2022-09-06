@@ -37,5 +37,5 @@ function Reverse(str) {
       return false;
     }
   }
-  console.log(Palindrome("Sator Arepo tenet opera rotas"));
+  console.log(Palindrome("baba"));
   
