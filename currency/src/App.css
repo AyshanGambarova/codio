@@ -18,7 +18,7 @@ button{
     color: #0E57D6;
 }
 .input-inner{
-  padding: 20px 35px 40px 35px;
+  padding: 35px;
   border-radius: 10px;
   box-shadow: rgba(14, 87, 214, 0.26) 0px 1px 4px;
 }
@@ -36,4 +36,9 @@ input{
     padding: 6px 28px;
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
+}
+.list-inner{
+  padding: 15px 35px;
+  border-radius: 30px;
+  box-shadow: rgb(14 87 214 / 26%) 0px 1px 4px;
 }

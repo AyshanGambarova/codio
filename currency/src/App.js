@@ -8,7 +8,7 @@ import "./App.css";
 const axiosInstance = axios.create({
   baseURL: "https://api.apilayer.com/exchangerates_data/",
   headers: {
-    apikey: "AgWGT0ZSyyHDxQ5rZqMLG5hu2Cj3y6pV",
+    apikey: "JBkTPffpowJs8VTkiZXp68k07nWH68OO",
   },
 });
 
@@ -96,7 +96,7 @@ function App() {
                 </button>
               </div>
               {rates && (
-                <div className="p-2">
+                <div className="p-2 mt-2">
                   {+(amount * rates?.[to]).toFixed(2)} {to}
                 </div>
               )}
@@ -105,15 +105,21 @@ function App() {
 
             {rates && (
               <>
-                <ul>
+                <div>
                   {Object.keys(rates)
                     .filter((c) => c !== to)
                     ?.map((c) => (
-                      <li key={c}>
-                        {+(amount * rates?.[c]).toFixed(2)} {c}
-                      </li>
+                      <div key={c} className="d-flex justify-content-between mt-3 list-inner">
+                        <div>
+                        {+(amount * rates?.[c]).toFixed(2)} 
+                        </div>
+                        <div>
+                        {c}
+                        </div>
+                          
+                      </div>
                     ))}
-                </ul>
+                </div>
               </>
             )}
           </div>
